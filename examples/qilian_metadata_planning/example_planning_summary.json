@@ -1,0 +1,21 @@
+{
+  "software_version": "1.2.4",
+  "case": "Qilian Mountains inventory-only multi-frame planning",
+  "raster_bulk_download_performed": false,
+  "frame_count": 22,
+  "ascending_frames": 11,
+  "descending_frames": 11,
+  "relative_orbit_groups": 12,
+  "maximum_common_calendar_interval": {
+    "start": "20141103",
+    "end": "20230907"
+  },
+  "exact_pair_retention_percent": {
+    "minimum": 71.38237671786581,
+    "maximum": 97.13375796178345
+  },
+  "disconnected_exact_common_pair_groups": [
+    "106D"
+  ],
+  "interpretation": "The interval is a planning interval, not a validated common reference period. Exact common-date and common-pair metrics apply only to same-relative-orbit groups containing at least two frames."
+}
