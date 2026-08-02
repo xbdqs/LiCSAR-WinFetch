@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use LiCSAR-WinFetch, cite the archived software release and associated paper."
+title: "LiCSAR-WinFetch"
+type: software
+authors:
+  - family-names: "Zhao"
+    given-names: "Renjie"
+version: "1.2.4"
+date-released: "2026-08-02"
+license: "GPL-3.0-or-later"
+abstract: "Windows-native LiCSAR acquisition, resumable transfer, inventory-only multi-frame temporal planning, structural validation, and bounded LiCSBAS-ready organisation."

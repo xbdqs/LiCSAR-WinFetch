@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Runtime and local outputs
+*.part
+*.tmp
+*.bak
+Qilian_Multiframe_Plan/
+data/
+local_data/
+outputs/
+download_report*.csv
+download_summary*.txt
+download.log
+
+# Large LiCSAR products
+*.tif
+*.tiff
+*.unw
+*.cc
+
+# Local configuration and secrets
+local_config.json
+.env
+*.token
+credentials*
+secrets*
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Keep intentionally published, sanitised evidence logs
+!paper/evidence/*.log

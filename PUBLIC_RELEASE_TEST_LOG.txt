@@ -1,0 +1,138 @@
+$ /opt/pyvenv/bin/python -m compileall -q .
+exit_code=0
+STDOUT:
+
+STDERR:
+
+
+$ /opt/pyvenv/bin/python download_licsar_windows.py --help
+exit_code=0
+STDOUT:
+usage: download_licsar_windows.py [-h] [--config CONFIG] [-f FRAME] [-s START]
+                                  [-e END] [-o OUTPUT] [--get_gacos]
+                                  [--no-gacos] [--n_para WORKERS] [--no-mli]
+                                  [--get_mli] [--base-url BASE_URL]
+                                  [--retries RETRIES]
+                                  [--timeout-connect TIMEOUT_CONNECT]
+                                  [--timeout-read TIMEOUT_READ]
+                                  [--progress-interval PROGRESS_INTERVAL]
+                                  [--overwrite] [--dry-run] [--no-verify-tls]
+                                  [--version]
+
+Download LiCSAR GeoTIFF products on Windows using the same file layout as
+LiCSBAS2 LiCSBAS01_get_geotiff.py.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       JSON configuration file (default: None)
+  -f, --frame FRAME     LiCSAR frame ID (default: None)
+  -s, --start START     Start date YYYYMMDD (default: None)
+  -e, --end END         End date YYYYMMDD (default: None)
+  -o, --output OUTPUT   Parent output directory; a FRAME_ID subfolder is
+                        created (default: None)
+  --get_gacos, --get-gacos
+                        Download available GACOS slant-delay GeoTIFFs
+                        (default: None)
+  --no-gacos            Do not download GACOS (default: None)
+  --n_para, --workers WORKERS
+                        Number of parallel download threads (default: None)
+  --no-mli              Skip the representative MLI file (not recommended for
+                        parity) (default: False)
+  --get_mli, --get-mli  Also download every available epoch MLI to GEOC.MLI,
+                        matching the current COMET LiCSBAS --get_mli option
+                        (default: False)
+  --base-url BASE_URL   Advanced: LiCSAR archive root URL (default: None)
+  --retries RETRIES     HTTP retry count (default: None)
+  --timeout-connect TIMEOUT_CONNECT
+                        Connect timeout seconds (default: None)
+  --timeout-read TIMEOUT_READ
+                        Read timeout seconds (default: None)
+  --progress-interval PROGRESS_INTERVAL
+                        Seconds between progress messages for a file still
+                        downloading (default: None)
+  --overwrite           Redownload files even when sizes already match
+                        (default: False)
+  --dry-run             Scan and report planned files without downloading
+                        (default: False)
+  --no-verify-tls       Disable TLS certificate verification (only for
+                        diagnosed certificate issues) (default: False)
+  --version             show program's version number and exit
+
+STDERR:
+
+
+$ /opt/pyvenv/bin/python multiframe_planner.py --help
+exit_code=0
+STDOUT:
+usage: multiframe_planner.py [-h] --frames FRAMES --output OUTPUT
+                             [--start START] [--end END] [--workers WORKERS]
+                             [--mode {independent,common-period,common-epochs,common-pairs}]
+                             [--base-url BASE_URL] [--retries RETRIES]
+                             [--timeout-connect TIMEOUT_CONNECT]
+                             [--timeout-read TIMEOUT_READ] [--no-verify-tls]
+                             [--version]
+
+Scan and harmonise temporal coverage for multiple LiCSAR frames.
+
+options:
+  -h, --help            show this help message and exit
+  --frames FRAMES       TXT or JSON frame list (default: None)
+  --output OUTPUT       Output planning directory (default: None)
+  --start START         Earliest date YYYYMMDD (default: 20141001)
+  --end END             Latest date YYYYMMDD (default: 20260802)
+  --workers WORKERS     Parallel frame scans (default: 6)
+  --mode {independent,common-period,common-epochs,common-pairs}
+                        Selection mode used for per-track download plans
+                        (default: common-period)
+  --base-url BASE_URL
+  --retries RETRIES
+  --timeout-connect TIMEOUT_CONNECT
+  --timeout-read TIMEOUT_READ
+  --no-verify-tls
+  --version             show program's version number and exit
+
+STDERR:
+
+
+$ /opt/pyvenv/bin/python verify_licsbas_structure.py --help
+exit_code=0
+STDOUT:
+usage: verify_licsbas_structure.py [-h] [--strict] frame_dir
+
+positional arguments:
+  frame_dir   Frame directory containing GEOC
+
+options:
+  -h, --help  show this help message and exit
+  --strict    Also fail when optional geometry/MLI/metadata products are
+              absent
+
+STDERR:
+
+
+$ /opt/pyvenv/bin/python -m unittest discover -s tests -v
+exit_code=0
+STDOUT:
+
+STDERR:
+test_optional_unavailable_product_is_not_critical (test_core.DownloadAndStructureTests.test_optional_unavailable_product_is_not_critical) ... ok
+test_part_file_resumes_and_records_transferred_bytes (test_core.DownloadAndStructureTests.test_part_file_resumes_and_records_transferred_bytes) ... ok
+test_server_ignoring_range_restarts_cleanly (test_core.DownloadAndStructureTests.test_server_ignoring_range_restarts_cleanly) ... ok
+test_unavailable_required_product_is_critical (test_core.DownloadAndStructureTests.test_unavailable_required_product_is_critical) ... ok
+test_benchmark_epoch_limit_guard_precedes_network (test_core.EvidenceSafetyTests.test_benchmark_epoch_limit_guard_precedes_network) ... ok
+test_empty_existing_frame_is_not_run_without_fake_path (test_core.EvidenceSafetyTests.test_empty_existing_frame_is_not_run_without_fake_path) ... ok
+test_zip_path_traversal_is_rejected (test_core.EvidenceSafetyTests.test_zip_path_traversal_is_rejected) ... ok
+test_direct_file_and_redirect_resolution (test_core.ResolverTests.test_direct_file_and_redirect_resolution) ... ok
+test_plain_text_absolute_url_fallback (test_core.ResolverTests.test_plain_text_absolute_url_fallback) ... ok
+test_text_manifest_resolution_without_trailing_slash (test_core.ResolverTests.test_text_manifest_resolution_without_trailing_slash) ... ok
+test_common_pair_mode_retains_isolated_common_epochs (test_core.ValidationTests.test_common_pair_mode_retains_isolated_common_epochs) ... ok
+test_frame_date_and_pair_validation (test_core.ValidationTests.test_frame_date_and_pair_validation) ... ok
+test_network_diagnostics (test_core.ValidationTests.test_network_diagnostics) ... ok
+test_qilian_inventory_safeguard (test_core.ValidationTests.test_qilian_inventory_safeguard) ... ok
+test_single_frame_group_marks_exact_intersection_not_applicable (test_core.ValidationTests.test_single_frame_group_marks_exact_intersection_not_applicable) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.006s
+
+OK
+

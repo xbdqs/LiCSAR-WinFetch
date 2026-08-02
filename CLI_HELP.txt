@@ -1,0 +1,49 @@
+usage: download_licsar_windows.py [-h] [--config CONFIG] [-f FRAME] [-s START]
+                                  [-e END] [-o OUTPUT] [--get_gacos]
+                                  [--no-gacos] [--n_para WORKERS] [--no-mli]
+                                  [--get_mli] [--base-url BASE_URL]
+                                  [--retries RETRIES]
+                                  [--timeout-connect TIMEOUT_CONNECT]
+                                  [--timeout-read TIMEOUT_READ]
+                                  [--progress-interval PROGRESS_INTERVAL]
+                                  [--overwrite] [--dry-run] [--no-verify-tls]
+                                  [--version]
+
+Download LiCSAR GeoTIFF products on Windows using the same file layout as
+LiCSBAS2 LiCSBAS01_get_geotiff.py.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       JSON configuration file (default: None)
+  -f, --frame FRAME     LiCSAR frame ID (default: None)
+  -s, --start START     Start date YYYYMMDD (default: None)
+  -e, --end END         End date YYYYMMDD (default: None)
+  -o, --output OUTPUT   Parent output directory; a FRAME_ID subfolder is
+                        created (default: None)
+  --get_gacos, --get-gacos
+                        Download available GACOS slant-delay GeoTIFFs
+                        (default: None)
+  --no-gacos            Do not download GACOS (default: None)
+  --n_para, --workers WORKERS
+                        Number of parallel download threads (default: None)
+  --no-mli              Skip the representative MLI file (not recommended for
+                        parity) (default: False)
+  --get_mli, --get-mli  Also download every available epoch MLI to GEOC.MLI,
+                        matching the current COMET LiCSBAS --get_mli option
+                        (default: False)
+  --base-url BASE_URL   Advanced: LiCSAR archive root URL (default: None)
+  --retries RETRIES     HTTP retry count (default: None)
+  --timeout-connect TIMEOUT_CONNECT
+                        Connect timeout seconds (default: None)
+  --timeout-read TIMEOUT_READ
+                        Read timeout seconds (default: None)
+  --progress-interval PROGRESS_INTERVAL
+                        Seconds between progress messages for a file still
+                        downloading (default: None)
+  --overwrite           Redownload files even when sizes already match
+                        (default: False)
+  --dry-run             Scan and report planned files without downloading
+                        (default: False)
+  --no-verify-tls       Disable TLS certificate verification (only for
+                        diagnosed certificate issues) (default: False)
+  --version             show program's version number and exit

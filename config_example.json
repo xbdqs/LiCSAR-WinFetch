@@ -1,0 +1,16 @@
+{
+  "frame": "021D_04972_131213",
+  "start": "20200101",
+  "end": "20201231",
+  "output": "data",
+  "workers": 4,
+  "get_gacos": false,
+  "download_mli": true,
+  "get_mli": false,
+  "retries": 4,
+  "timeout_connect": 20,
+  "timeout_read": 180,
+  "progress_interval": 10,
+  "overwrite": false,
+  "dry_run": true
+}
