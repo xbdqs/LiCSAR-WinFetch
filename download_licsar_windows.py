@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Windows-compatible LiCSAR downloader whose output layout matches
+Cross-platform Python LiCSAR downloader whose output layout matches
 LiCSBAS2 LiCSBAS01_get_geotiff.py.
 
 Default layout:
@@ -22,8 +22,9 @@ Default layout:
      └─ YYYYMMDD.sltd.geo.tif
 
 The script is independent from LiCSBAS2, but follows its naming and directory
-conventions so the downloaded frame directory can later be copied/mounted into
-Linux and processed from LiCSBAS2 step 02 onward.
+conventions. It was originally developed for Windows-first use, while its core
+Python implementation uses platform-neutral path and file APIs. Downstream
+LiCSBAS execution still follows the environment requirements of LiCSBAS itself.
 """
 
 from __future__ import annotations
@@ -52,7 +53,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from tqdm import tqdm
 
-VERSION = "1.2.4"
+VERSION = "1.3.0-rc1"
 DEFAULT_BASE_URL = (
     "https://gws-access.jasmin.ac.uk/public/"
     "nceo_geohazards/LiCSAR_products/"
@@ -99,7 +100,7 @@ class Settings:
     overwrite: bool = False
     dry_run: bool = False
     verify_tls: bool = True
-    user_agent: str = "LiCSAR-Windows-Downloader/1.1.2"
+    user_agent: str = "LiCSAR-WinFetch/1.3.0-rc1"
     progress_interval: float = 10.0
 
     @property
@@ -1111,7 +1112,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         return 2
 
     logger = setup_logging(settings.frame_dir)
-    logger.info("LiCSAR Windows Downloader %s", VERSION)
+    logger.info("LiCSAR-WinFetch %s", VERSION)
     logger.info("Frame: %s (track %s)", settings.frame, settings.track)
     logger.info(
         "Date range: %s to %s",

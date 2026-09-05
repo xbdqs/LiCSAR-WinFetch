@@ -1,0 +1,27 @@
+{
+  "status": "ok",
+  "source": "supplied local CSV inventories; no remote request",
+  "frame_count": 22,
+  "successful_frames": 22,
+  "ascending_frames": 11,
+  "descending_frames": 11,
+  "relative_orbit_groups": 12,
+  "two_frame_relative_orbit_groups": 10,
+  "single_frame_relative_orbit_groups": [
+    "055A",
+    "150D"
+  ],
+  "project_maximum_common_calendar_start": "20141103",
+  "project_maximum_common_calendar_end": "20230907",
+  "ascending_maximum_common_calendar_start": "20141022",
+  "ascending_maximum_common_calendar_end": "20231219",
+  "descending_maximum_common_calendar_start": "20141103",
+  "descending_maximum_common_calendar_end": "20230907",
+  "exact_pair_retention_min_percent": 71.38237671786581,
+  "exact_pair_retention_max_percent": 97.13375796178345,
+  "exact_common_pair_disconnected_groups": [
+    "106D"
+  ],
+  "raster_bulk_download_performed": false,
+  "terminology_note": "Maximum common calendar intervals are planning intervals, not scientifically validated common reference periods."
+}

@@ -44,3 +44,7 @@ Thumbs.db
 
 # Keep intentionally published, sanitised evidence logs
 !paper/evidence/*.log
+
+# Reviewer-revision generated outputs
+reviewer_outputs/
+reviewer_outputs_ci/

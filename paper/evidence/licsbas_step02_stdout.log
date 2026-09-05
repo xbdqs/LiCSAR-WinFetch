@@ -1,0 +1,42 @@
+Starting
+warning, networkx is not installed
+warning, libcomcat is not installed
+not loading RANSAC (optional experimental function)
+LiCSBAS02_ml_prep.py -i GEOC -n 1
+
+Create E.geo
+  E.geo created
+
+Create N.geo
+  N.geo created
+
+Create U.geo
+  U.geo created
+
+Create slc.mli
+  slc.mli[.png] created
+
+Create hgt
+  hgt[.png] created
+
+Create unw and cc
+  6 parallel processing for ifg...
+  Processing 20160909_20160921...
+  Processing 20160909_20160927...
+  Processing 20160909_20161003...
+  Processing 20160921_20160927...
+  Processing 20160921_20161003...
+  Processing 20160927_20161003...
+
+Create slc.mli.par
+
+Create EQA.dem_par
+
+Copy baselines file
+
+Elapsed time: 00h 00m 20s
+
+LiCSBAS02_ml_prep.py Successfully finished!!
+
+Output directory: GEOCml1
+

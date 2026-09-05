@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "return_code": 0,
+  "distribution": "Ubuntu-22.04",
+  "python_version": "Python 3.10.20",
+  "licsbas_command": "$HOME/LiCSBAS/bin/LiCSBAS02_ml_prep.py",
+  "licsbas_path": "$HOME/LiCSBAS",
+  "licsbas_commit": "a145e6c4217b29eb7348ea95630454a099809098",
+  "bashrc": "$HOME/LiCSBAS/bashrc_LiCSBAS.sh",
+  "conda_executable": "<CONDA_EXECUTABLE>",
+  "conda_env": "licsbas",
+  "frame_dir_windows": "<BENCHMARK_FRAME_DIR_WINDOWS>",
+  "frame_dir_wsl": "<BENCHMARK_FRAME_DIR_WSL>",
+  "command": "wsl.exe -d Ubuntu-22.04 -- bash -lc \"<CONDA_EXECUTABLE> run -n licsbas bash -lc 'source $HOME/LiCSBAS/bashrc_LiCSBAS.sh; cd <BENCHMARK_FRAME_DIR_WSL>; LiCSBAS02_ml_prep.py -i GEOC -n 1'\"",
+  "started_utc": "2026-08-02T20:33:53.370691+00:00",
+  "finished_utc": "2026-08-02T20:34:19.123091+00:00",
+  "generated_directories": [
+    "GEOCml1"
+  ],
+  "generated_file_count": 28,
+  "manual_renaming_or_reorganisation_required": false,
+  "stdout_log": "paper/evidence/licsbas_step02_stdout.log",
+  "stderr_log": "paper/evidence/licsbas_step02_stderr.log",
+  "paths_redacted_for_public_release": true,
+  "path_redaction_note": "User-specific Windows, WSL home, and Conda paths were replaced by placeholders. The distribution, Python version, LiCSBAS commit, command arguments, exit code, runtime timestamps, and output counts are unchanged."
+}

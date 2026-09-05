@@ -1,0 +1,24 @@
+{
+  "status": "ok",
+  "validation_mode": "local reuse; no network request and no redownload",
+  "frame": "124D_04854_171313",
+  "selected_epoch_count": 4,
+  "selected_pair_count": 6,
+  "selected_network_connected": true,
+  "file_count": 20,
+  "present_bytes": 393567184,
+  "complete_pairs": 6,
+  "pair_data_bytes": 237578870,
+  "auxiliary_files_present": 8,
+  "sampled_tiff_headers_valid": 7,
+  "sampled_tiff_headers_total": 7,
+  "sha256_matches": 14,
+  "sha256_total": 14,
+  "gacos_enabled": false,
+  "licsbas_step02_status": "passed",
+  "licsbas_step02_return_code": 0,
+  "licsbas_step02_generated_directory": [
+    "GEOCml1"
+  ],
+  "licsbas_step02_generated_file_count": 28
+}

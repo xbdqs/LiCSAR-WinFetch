@@ -1,0 +1,9 @@
+﻿Capability,LiCSAR-WinFetch,Maintained LiCSBAS step 01,Interpretation
+Frame-aware discovery,Yes,Yes,Shared capability
+Parallel download / existing-file check,Yes,Yes,Shared capability
+Representative MLI / optional GACOS,Yes / Yes,Yes / Yes,Shared capability
+Windows-native execution without WSL,Yes,No (Unix-oriented),Operational distinction
+Persistent .part files / HTTP Range resume,Yes,Whole-file retry,Implementation difference; no speed claim
+Machine-readable file-state report,Yes,No equivalent report,Traceability distinction
+Standalone post-copy structural validation,Yes,No dedicated command,Validation distinction
+Inventory-only multi-frame temporal planning,Yes,No,Planning distinction

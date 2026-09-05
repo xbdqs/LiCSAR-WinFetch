@@ -1,0 +1,23 @@
+{
+  "analysis": "Reviewer 1 comment 3 zero-download four-mode comparison",
+  "frames": [
+    "106D_05049_131313",
+    "106D_05248_131313"
+  ],
+  "common_calendar_interval": [
+    "20141024",
+    "20230907"
+  ],
+  "common_epoch_count": 216,
+  "common_pair_count": 1970,
+  "common_pair_graph_component_count": 4,
+  "common_pair_graph_largest_component_nodes": 213,
+  "common_pair_graph_isolated_epoch_count": 3,
+  "isolated_common_epochs": [
+    "20220409",
+    "20230323",
+    "20230814"
+  ],
+  "common_pair_retention_relative_to_smaller_common_period_network": 0.9398854961832062,
+  "network_note": "Connectivity is topological only and does not imply coherence, unwrapping quality, atmospheric quality, or cross-frame reference consistency."
+}

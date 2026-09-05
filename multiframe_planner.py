@@ -55,7 +55,7 @@ from download_licsar_windows import (
     parse_yyyymmdd,
 )
 
-VERSION = "1.2.4"
+VERSION = "1.3.0-rc1"
 
 
 @dataclass

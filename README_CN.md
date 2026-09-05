@@ -1,63 +1,43 @@
-# LiCSAR-WinFetch 中文快速开始
+# LiCSAR-WinFetch
 
-LiCSAR-WinFetch 用于在 Windows 中发现和下载 LiCSAR 产品、支持断点恢复、
-建立 LiCSBAS-ready 目录、验证必需的 `unw`/`cc` 文件，并在大规模下载前
-利用轻量清单规划多帧时间范围。
+LiCSAR-WinFetch 是用于 LiCSAR 产品获取、断点续传、LiCSBAS-ready 目录组织、结构检查和多帧时间规划的开源 Python 工具。
 
-软件不执行干涉图生成、时序反演、多帧拼接、跨帧参考统一、大气建模、
-升降轨分解或形变解释。
+本项目最初面向 Windows 用户的实际获取需求开发，但核心代码使用 Python 的跨平台路径、网络和文件操作。当前 `1.3.0-rc1` 是**审稿修订测试候选版**，GitHub Actions 已配置为在 Windows、Ubuntu Linux 和 macOS 上运行；是否真正通过必须以 Actions 页面的实际结果为准，不能预先声称全部通过。
 
-## 安装
+软件不负责生成干涉图、时序反演、多帧拼接、跨帧参考统一、大气建模、升降轨 LOS 分解或地球物理解释。
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+## 当前修订版新增的验证工具
+
+`reviewer_validation/` 包含三组审稿回复所需的可复现工具：
+
+1. **106D 四模式零下载比较**：比较 independent、common-period、common-epochs、common-pairs，并计算节点、边、连通分量、最大连通分量、孤立日期、平均度、cycle rank、时间基线等；
+2. **20/20 文件 SHA-256**：对受控 benchmark 清单中的全部 20 个文件计算 SHA-256；
+3. **LiCSAR-WinFetch vs LiCSBAS Step 01 等价性比较**：比较相同 20 个 LiCSAR 对象的存在性、大小和 SHA-256，不做速度比较。
+
+## 本地零下载测试
+
+Windows：
+
+```text
+RUN_REVISION_CHECKS.bat
 ```
 
-也可以运行：
+Linux/macOS：
 
-```powershell
-conda env create -f environment.yml
-conda activate licsar_download
+```text
+./run_revision_checks.sh
 ```
 
-## 单帧清单检查与下载
+该步骤不会下载 22 帧 GeoTIFF，也不会执行大型网络下载。
 
-先检查 `config_example.json`。示例默认设置为 `dry_run: true`：
+完整操作顺序见：
 
-```powershell
-python download_licsar_windows.py --config config_example.json --dry-run
+```text
+REVIEWER_REVISION_TESTING_GUIDE_CN.md
 ```
 
-确认帧号、日期范围、产品和输出目录后，再将 `dry_run` 改为 `false`并运行。
-未完成文件保存为 `.part`；通过可用的远端大小检查后才改为正式文件名。
+## 版本原则
 
-## 多帧规划
-
-```powershell
-python multiframe_planner.py `
-  --frames examples\qilian_metadata_planning\qilianshan_frames.json `
-  --start 20141001 --end 20260728 --mode common-period `
-  --output Qilian_Multiframe_Plan
-```
-
-祁连山22帧示例只进行元数据/清单规划，不下载22帧GeoTIFF。不同相对轨道
-默认协调共同日历区间；共同日期和严格共同干涉对主要用于同轨相邻帧。
-
-## 结构验证
-
-```powershell
-python verify_licsbas_structure.py data\021D_04972_131213
-```
-
-## 测试和图件复现
-
-```powershell
-python -m compileall -q .
-python -m unittest discover -s tests -v
-python paper\figures\Code\plot_all_figures.py
-```
-
-`paper/`中包含脱敏后的验证证据、图件源数据、每幅图的独立代码及最终图件。
-仓库不包含大型TIFF、本地环境、认证文件或用户本地路径。
+- `v1.2.4`：初次投稿时的固定 Release，应保留，不删除、不覆盖；
+- `1.3.0-rc1`：当前用于审稿修订测试的候选版；
+- 所有真实验证完成后，再冻结并发布 `v1.3.0`。
