@@ -4,7 +4,7 @@
 
 **不要删除 GitHub 仓库本身，也不要删除 `v1.2.4` tag / Release。**
 
-`v1.2.4` 是初次投稿时的固定版本，后续回复审稿人需要保留这个历史证据。现在只需要把仓库 `main` 分支更新为 `1.3.0-rc1` 审稿修订候选版。完成所有真实验证以后，再创建正式 `v1.3.0` Release。
+`v1.2.4` 是初次投稿时的固定版本，必须继续保留。审稿修订所要求的真实验证现已完成并锁定：跨平台 CI 6/6、106D 四模式零下载比较、LiCSBAS Step 01 bounded 对照、20/20 SHA-256，以及既有 LiCSBAS Step 02 验证。仓库内容现已冻结为 `v1.3.0` 发布候选。
 
 ## 1. 这次完整包中已经包含什么
 
@@ -64,7 +64,7 @@ RUN_REVISION_CHECKS.bat
 6. Commit summary 填：
 
 ```text
-Prepare v1.3.0-rc1 reviewer revision candidate
+Prepare v1.3.0 reviewer revision release
 ```
 
 7. Commit to main；

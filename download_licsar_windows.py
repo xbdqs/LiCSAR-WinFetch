@@ -53,7 +53,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from tqdm import tqdm
 
-VERSION = "1.3.0-rc1"
+VERSION = "1.3.0"
 DEFAULT_BASE_URL = (
     "https://gws-access.jasmin.ac.uk/public/"
     "nceo_geohazards/LiCSAR_products/"
@@ -100,7 +100,7 @@ class Settings:
     overwrite: bool = False
     dry_run: bool = False
     verify_tls: bool = True
-    user_agent: str = "LiCSAR-WinFetch/1.3.0-rc1"
+    user_agent: str = "LiCSAR-WinFetch/1.3.0"
     progress_interval: float = 10.0
 
     @property

@@ -1,0 +1,8 @@
+{
+  "expected_file_count": 20,
+  "present_in_both": 20,
+  "identical_size_count": 19,
+  "identical_sha256_count": 19,
+  "all_20_identical": false,
+  "comparison_scope": "bounded correctness/equivalence only; no transfer-speed claim"
+}

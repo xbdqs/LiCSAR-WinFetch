@@ -1,5 +1,7 @@
-﻿stage,result,inference
-Code tests,15/15 passed,Encoded behaviours
-Qilian inventories,22/22 scans,Planning evidence
-Bounded transfer,20/20 files; 6/6 pairs,Acquisition and structure
-LiCSBAS step 02,Exit 0; 28 files,Bounded interoperability
+stage,result
+Cross-platform CI,6/6 jobs
+Deterministic tests,15/15 passed
+Qilian inventories,22/22 scans
+Benchmark paths,20/20 present
+SHA-256 comparison,20/20 hashed; 19/20 identical
+LiCSBAS step 02,6/6 IFGs

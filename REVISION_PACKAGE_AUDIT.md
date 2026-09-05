@@ -1,22 +1,21 @@
-# Reviewer-revision repository package audit
+# Reviewer revision package audit
 
-Candidate: `1.3.0-rc1`
+Version: `1.3.0`
+Date: 2026-09-05
 
-Purpose: replace the **main-branch working tree** for reviewer testing while preserving the immutable initial-submission `v1.2.4` tag/release.
+## Completed validation
 
-Checks completed during package assembly:
+- Cross-platform CI: 6/6 jobs passed (Windows, Ubuntu, macOS × Python 3.10, 3.12).
+- Local deterministic tests: 15/15 passed.
+- Qilian zero-download planning evidence: 22/22 frame inventories, four-mode 106D comparison, three isolated common epochs explicitly recorded.
+- Maintained COMET LiCSBAS Step 01 comparison: 20/20 expected paths present in both outputs, 19/20 byte-identical, all 12 IFG products byte-identical; representative MLI source epoch is the sole content difference.
+- SHA-256 coverage: all 20 benchmark files hashed on both sides; 19/19 fixed-size products matched.
+- LiCSBAS Step 02: exit 0; all six bounded IFGs processed; GEOCml1 generated with 28 files.
 
-- Source compilation: PASS.
-- Existing deterministic unit tests: 15/15 PASS on the assembly Linux environment.
-- Zero-download 106D reviewer regression: PASS.
-- 106D exact-common-pair reference result recomputed from archived inventories: 1970 common pairs, 4 graph components, 3 isolated common epochs (`20220409`, `20230323`, `20230814`).
-- Figure 3 regenerated with the three isolated 106D common epochs marked.
-- Cross-platform GitHub Actions matrix configured for Windows, Ubuntu and macOS, Python 3.10 and 3.12. **The package does not claim these jobs passed until the author uploads the candidate and the Actions jobs actually finish.**
-- Full 20-file bounded benchmark manifest included.
-- Full-20 SHA-256 utility included, but no new 20/20 result is claimed until run on the author's local benchmark.
-- LiCSAR-WinFetch versus maintained LiCSBAS Step 01 equivalence utility included, but no equivalence result is claimed until both bounded directories are actually produced/located and compared.
-- No Qilian bulk GeoTIFF download is included or required.
-- No credentials, tokens, cookies, benchmark rasters or 22-frame raster collection are included.
-- Public citation/notice authorship is aligned with the submitted manuscript author: Qingsong Du.
+## Scope limits retained
 
-After upload, the first feedback required is the GitHub Actions result plus the Windows `RUN_REVISION_CHECKS.bat` result. Do not create `v1.3.0` before these checks and the remaining reviewer validations are complete.
+No claim is made for transfer-speed superiority, universal/future LiCSAR archive compatibility, LiCSBAS Step 03+, time-series inversion, cross-frame reference harmonisation, LOS decomposition, or geophysical validity.
+
+## Version history
+
+`v1.2.4` remains the immutable initial-submission release. `v1.3.0` is the reviewer-revision release.

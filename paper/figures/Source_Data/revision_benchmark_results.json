@@ -1,0 +1,19 @@
+{
+  "frame": "124D_04854_171313",
+  "start": "20160909",
+  "end": "20161003",
+  "selected_epoch_count": 4,
+  "selected_pair_count": 6,
+  "benchmark_file_count": 20,
+  "complete_pairs": 6,
+  "structure_verification": "passed",
+  "step01_paths_present_in_both": 20,
+  "step01_identical_sha256_count": 19,
+  "all_ifg_products_byte_identical": true,
+  "sha256_computed_per_side": 20,
+  "fixed_size_products_checked": 19,
+  "fixed_size_products_matched": 19,
+  "representative_mli_size_constrained": false,
+  "representative_mli_difference": "LiCSBAS step 01 selected 20160909.geo.mli.tif; LiCSAR-WinFetch selected 20161003.geo.mli.tif",
+  "speed_comparison_claimed": false
+}

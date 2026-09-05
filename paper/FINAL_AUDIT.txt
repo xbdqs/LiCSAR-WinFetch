@@ -1,0 +1,16 @@
+LiCSAR-WinFetch paper figures/tables final replacement audit
+
+Figure_1_Software_Architecture.png: 6930 x 2910 px
+Figure_2_Download_Reliability_and_Directory.png: 7079 x 3240 px
+Figure_3_Qilian_Temporal_Coverage.png: 6649 x 4424 px
+Figure_4_Validation_Evidence_Boundary.png: 6960 x 2700 px
+Table_1_Software_Capability_Comparison.csv: 9 data rows, 4 columns
+Table_2_106D_Temporal_Mode_Comparison.csv: 8 data rows, 10 columns
+Table_3_Validation_Cases.csv: 6 data rows, 4 columns
+
+Final checks:
+- All four plotting scripts compile and run together.
+- PNG and vector PDF outputs regenerated.
+- Old Table_2_Validation_Cases.csv removed; validation summary is now Table 3.
+- Figure 3 uses “maximum common calendar interval” terminology.
+- Reviewer 1 C3/C5/C6/C7 evidence is reflected without overclaiming.

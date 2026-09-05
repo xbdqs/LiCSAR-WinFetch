@@ -1,5 +1,3 @@
-LiCSAR-WinFetch 1.3.0-rc1 reviewer-revision candidate
-Copyright (C) 2026 Qingsong Du
+LiCSAR-WinFetch 1.3.0
 
-This software is distributed under the GNU General Public License v3.0 or later.
-LiCSAR, LiCSBAS, Sentinel-1, COMET-LiCS, CEDA and JASMIN are acknowledged as upstream projects/services where applicable. Their names do not imply endorsement of this software.
+Reviewer-revision release of LiCSAR-WinFetch. The project is distributed under GPL-3.0-or-later. LiCSAR products are provided by COMET-LiCS and contain modified Copernicus Sentinel data; users should follow the upstream data acknowledgements and terms.

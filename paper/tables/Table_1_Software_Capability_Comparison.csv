@@ -1,9 +1,10 @@
 ﻿Capability,LiCSAR-WinFetch,Maintained LiCSBAS step 01,Interpretation
-Frame-aware discovery,Yes,Yes,Shared capability
-Parallel download / existing-file check,Yes,Yes,Shared capability
-Representative MLI / optional GACOS,Yes / Yes,Yes / Yes,Shared capability
-Windows-native execution without WSL,Yes,No (Unix-oriented),Operational distinction
-Persistent .part files / HTTP Range resume,Yes,Whole-file retry,Implementation difference; no speed claim
-Machine-readable file-state report,Yes,No equivalent report,Traceability distinction
-Standalone post-copy structural validation,Yes,No dedicated command,Validation distinction
+Frame-aware LiCSAR discovery,Yes,Yes,Shared acquisition capability
+Windows acquisition without WSL,Yes,No; LiCSBAS comparison was run under Ubuntu/WSL,Operational distinction demonstrated by the validation environments
+Cross-platform CI coverage in this study,Windows / Ubuntu / macOS; Python 3.10 / 3.12,Not evaluated in this study,LiCSAR-WinFetch core is not Windows-only
+Parallel transfer and existing-file checks,Yes,Yes,Shared capability
+Persistent .part files and HTTP Range resume,Yes,Whole-file retry,Implementation difference; no speed claim
+Representative MLI and optional GACOS,Yes / Yes,Yes / Yes,Shared capability
+Machine-readable per-file report,Yes,No equivalent report in step 01,Traceability distinction
+Standalone structural validation,Yes,No dedicated command,Validation distinction
 Inventory-only multi-frame temporal planning,Yes,No,Planning distinction

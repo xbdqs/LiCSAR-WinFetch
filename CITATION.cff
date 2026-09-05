@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Du"
     given-names: "Qingsong"
-version: "1.3.0-rc1"
+version: "1.3.0"
 license: "GPL-3.0-or-later"
 repository-code: "https://github.com/xbdqs/LiCSAR-WinFetch"
-abstract: "Reproducible LiCSAR acquisition, resumable transfer, inventory-only multi-frame temporal planning, structural validation, and bounded LiCSBAS-ready organisation. This reviewer-revision candidate adds cross-platform continuous-integration checks and reviewer-specific validation utilities."
+abstract: "Reproducible LiCSAR acquisition, resumable transfer, inventory-only multi-frame temporal planning, structural validation, and bounded LiCSBAS-ready organisation. Version 1.3.0 adds cross-platform validation and reviewer-requested temporal-planning and LiCSBAS-equivalence evidence."

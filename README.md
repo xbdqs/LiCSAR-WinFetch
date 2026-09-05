@@ -2,7 +2,7 @@
 
 LiCSAR-WinFetch is an open-source Python tool for reproducible LiCSAR product acquisition, resumable transfer, LiCSBAS-ready file organisation, structural validation, and inventory-only multi-frame temporal planning.
 
-The project was originally developed to remove a practical acquisition barrier for Windows users. The core implementation uses platform-neutral Python path, networking, temporary-file and rename operations. The reviewer-revision candidate (`1.3.0-rc1`) is configured for continuous-integration testing on Windows, Ubuntu Linux and macOS. The current status of those jobs must be read from the repository **Actions** page; do not infer a pass before the jobs have completed.
+The project was originally developed to remove a practical acquisition barrier for Windows users. The core implementation uses platform-neutral Python path, networking, temporary-file and rename operations. The software was originally developed to remove a practical acquisition barrier for Windows users, but its core implementation uses platform-neutral Python path, networking, temporary-file and rename operations. Version `1.3.0` was validated by continuous integration on Windows, Ubuntu Linux and macOS under Python 3.10 and 3.12; all six OS/Python jobs passed in the reviewer-revision validation.
 
 The software does **not** generate interferograms, perform time-series inversion, mosaic frames, harmonise cross-frame references, model atmospheric effects, perform ascending/descending LOS decomposition, or interpret deformation.
 
@@ -22,14 +22,14 @@ The maintained LiCSBAS Step 01 already provides frame-aware discovery, parallel 
 
 ## Platform support and intended users
 
-The original user case was Windows-first acquisition. The Python core itself is not intended to depend on a Windows-only runtime. For the reviewer revision, the same deterministic tests and command-line checks are configured on:
+The original user case was Windows-first acquisition, including delegated acquisition by collaborators who did not routinely use Linux or LiCSBAS. The Python core itself does not depend on a Windows-only runtime. For version 1.3.0, the same deterministic tests and command-line checks passed on:
 
 - Windows (`windows-latest`),
 - Ubuntu Linux (`ubuntu-latest`),
 - macOS (`macos-latest`),
 - Python 3.10 and 3.12.
 
-The public GitHub Actions result is the evidence for the actual pass/fail state. Windows `.bat` files in this repository are convenience launchers only.
+All six combinations passed in the reviewer-revision validation. Windows `.bat` files in this repository are convenience launchers only; the core Python commands are cross-platform. The historical entry-point filename `download_licsar_windows.py` is retained for backward compatibility; the implementation itself is cross-platform.
 
 ## Installation
 
@@ -98,7 +98,7 @@ python multiframe_planner.py \
   --output Qilian_Multiframe_Plan
 ```
 
-The planner creates frame, epoch, pair, relative-orbit, direction and project summaries plus a machine-readable plan. Exact common epochs and pairs are evaluated only for comparable same-relative-orbit groups. Across different relative orbits, a common calendar interval is the conservative default. Tolerance-based cross-orbit date matching is discussed as a possible extension; it is not claimed as implemented LOS-decomposition functionality in this revision candidate.
+The planner creates frame, epoch, pair, relative-orbit, direction and project summaries plus a machine-readable plan. Exact common epochs and pairs are evaluated only for comparable same-relative-orbit groups. Across different relative orbits, a common calendar interval is the conservative default. Tolerance-based cross-orbit date matching (for example, configurable ±k-day matching) is a documented possible extension; it is not implemented or claimed as LOS-decomposition functionality in version 1.3.0.
 
 ## Validate an existing frame
 
@@ -156,7 +156,7 @@ After locating the existing bounded benchmark frame directory:
 python reviewer_validation/hash_manifest.py <WINFETCH_FRAME_DIR> --output-dir reviewer_outputs
 ```
 
-The exact 20 expected relative paths and byte counts are defined in `reviewer_validation/manifests/bounded_benchmark_20_files.csv`.
+The exact 20 expected relative paths are defined in `reviewer_validation/manifests/bounded_benchmark_20_files.csv`. Fixed expected byte counts are checked for 19 products; the representative MLI is intentionally size-unconstrained because the selected source epoch can differ by downloader selection rule.
 
 ### Reviewer 1 comment 5: correctness comparison with LiCSBAS Step 01
 
@@ -172,9 +172,9 @@ See `REVIEWER_REVISION_TESTING_GUIDE_CN.md` for the step-by-step revision workfl
 
 ## Paper evidence and figures
 
-The `paper/` directory preserves the evidence package associated with the initial submission, including sanitised LiCSBAS Step-02 logs, Qilian inventories, figure source data and plotting scripts. Reviewer-revision outputs are kept separately under `reviewer_outputs/` so that new evidence is not silently mixed with the original submission evidence.
+The `paper/` directory preserves the initial-submission evidence and the reviewer-revision figure/table package. Reviewer-specific validation utilities and compact reference outputs are under `reviewer_validation/`, including the 106D four-mode comparison and bounded LiCSBAS Step-01 equivalence evidence.
 
-Recreate the initial-submission figures with:
+Recreate the current manuscript figures with:
 
 ```text
 python paper/figures/Code/plot_all_figures.py
@@ -206,8 +206,9 @@ LiCSAR-WinFetch/
 ## Version status
 
 - `v1.2.4`: immutable initial-submission release.
-- `1.3.0-rc1`: reviewer-revision testing candidate on the `main` branch.
-- Do **not** create `v1.3.0` until the reviewer-requested validations have been completed and checked.
+- `v1.3.0`: reviewer-revision release, incorporating cross-platform validation and reviewer-requested evidence.
+
+The `v1.2.4` release is retained unchanged so the initial-submission software remains citable and reproducible.
 
 ## License and citation
 

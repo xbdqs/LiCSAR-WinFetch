@@ -6,7 +6,7 @@ GEOC/124D_04854_171313.geo.hgt.tif,17879631,metadata,124D_04854_171313.geo.hgt.t
 GEOC/baselines,12680,metadata,baselines
 GEOC/network.png,1361798,metadata,network.png
 GEOC/metadata.txt,248,metadata,metadata.txt
-GEOC/124D_04854_171313.geo.mli.tif,29895431,mli,20180508.geo.mli.tif -> 124D_04854_171313.geo.mli.tif
+GEOC/124D_04854_171313.geo.mli.tif,,mli,representative MLI; source epoch depends on selection rule
 GEOC/20160909_20160921/20160909_20160921.geo.unw.tif,35605402,unw,20160909_20160921.geo.unw.tif
 GEOC/20160909_20160921/20160909_20160921.geo.cc.tif,3960211,cc,20160909_20160921.geo.cc.tif
 GEOC/20160909_20160927/20160909_20160927.geo.unw.tif,35596492,unw,20160909_20160927.geo.unw.tif

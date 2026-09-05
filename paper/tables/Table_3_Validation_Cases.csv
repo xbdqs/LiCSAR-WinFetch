@@ -1,0 +1,7 @@
+Case,Scale,Observed result,Does not establish
+Cross-platform CI,"Windows, Ubuntu and macOS; Python 3.10 and 3.12",6/6 jobs passed,"Compatibility with every future dependency, remote-service change or OS release"
+Deterministic tests,15 tests,15/15 passed,Compatibility with all future LiCSAR portal forms
+Qilian planning,22 frames,"22/22 inventory scans; maximum common calendar interval 2014-11-03 to 2023-09-07","Raster transfer, cross-frame reference consistency or geophysical validity"
+Bounded LiCSBAS step 01 comparison,"4 epochs; 6 pairs; 20 benchmark paths","20/20 paths present in both outputs; 19/20 SHA-256 identical; all 12 IFG products byte-identical; sole difference was representative MLI source epoch","Transfer-speed superiority, global archive compatibility or scientific/pixel validity"
+Full benchmark hashing,20 benchmark files per downloader,"20/20 SHA-256 values computed on each side; 19/19 fixed-size products matched; representative MLI size unconstrained by design",Long-term immutability of remote products
+LiCSBAS step 02,Copied bounded benchmark,"Exit 0; GEOCml1 produced; 28 files; all 6 IFGs processed","Step 03+, inversion, cross-frame harmonisation or scientific correctness"

@@ -1,0 +1,11 @@
+{
+  "manifest_file_count": 20,
+  "present_file_count": 20,
+  "missing_file_count": 0,
+  "size_checked_count": 19,
+  "size_match_count": 19,
+  "size_mismatch_count": 0,
+  "size_unconstrained_count": 1,
+  "sha256_count": 20,
+  "missing": []
+}

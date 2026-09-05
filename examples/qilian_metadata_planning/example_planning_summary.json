@@ -1,5 +1,5 @@
 {
-  "software_version": "1.3.0-rc1",
+  "software_version": "1.3.0",
   "case": "Qilian Mountains inventory-only multi-frame planning",
   "raster_bulk_download_performed": false,
   "frame_count": 22,

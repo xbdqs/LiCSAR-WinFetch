@@ -1,0 +1,9 @@
+﻿Mode,Frame,Epochs,Pairs,Edge/node ratio,Components,Largest component (nodes),Isolated epochs,Median baseline [IQR] (days)
+Independent,106D_05049_131313,216,2096,9.7,3,214,2,384 [780]
+Independent,106D_05248_131313,232,5490,23.66,1,232,0,288 [564]
+Common period,106D_05049_131313,216,2096,9.7,3,214,2,384 [780]
+Common period,106D_05248_131313,232,5490,23.66,1,232,0,288 [564]
+Common epochs,106D_05049_131313,216,2096,9.7,3,214,2,384 [780]
+Common epochs,106D_05248_131313,216,4880,22.59,1,216,0,264 [492]
+Exact common pairs,106D_05049_131313,216,1970,9.12,4,213,3,384 [777]
+Exact common pairs,106D_05248_131313,216,1970,9.12,4,213,3,384 [777]

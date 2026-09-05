@@ -1,11 +1,12 @@
 # Manuscript reproducibility materials
 
-This directory contains the small public evidence and plotting materials associated with the LiCSAR-WinFetch SoftwareX manuscript. It does not contain the submitted manuscript file or large LiCSAR raster data.
+This directory contains the compact plotting, table and public evidence materials associated with the LiCSAR-WinFetch SoftwareX manuscript revision. Large LiCSAR rasters and user-specific paths are not included.
 
-- `evidence/`: sanitised evidence retained from the initial-submission validation, including the bounded LiCSBAS Step-02 run.
-- `figures/Code/`: plotting scripts.
-- `figures/Source_Data/`: archived Qilian inventories and other figure source data.
-- `figures/Final/`: current repository figure renderings. Figure 3 in the reviewer-revision candidate additionally marks the three isolated 106D common epochs requested by Reviewer 1.
-- `tables/`: initial-submission table source CSV files.
+- `evidence/`: retained bounded-validation evidence from the initial validation, including the LiCSBAS step-02 run.
+- `figures/Code/`: final plotting scripts for Figures 1–4.
+- `figures/Source_Data/`: Qilian inventories and reviewer-revision source data used by the plotting scripts.
+- `figures/Final/`: regenerated final PNG and PDF figures.
+- `tables/`: final source CSV files for Tables 1–3.
+- `FIGURE_TABLE_CAPTIONS.md`: recommended manuscript captions and table notes, including the exact 106D retention definition and validation boundaries.
 
-Reviewer-specific new validation is intentionally stored in `../reviewer_validation/` and generated into the ignored `../reviewer_outputs/` directory. This separation prevents new revision evidence from being silently mixed with the initial-submission evidence.
+Reviewer-specific execution tools and raw revision outputs remain outside this folder under `../reviewer_validation/` so that new reviewer evidence is not confused with the initial-submission evidence archive.

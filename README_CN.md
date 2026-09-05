@@ -2,7 +2,7 @@
 
 LiCSAR-WinFetch 是用于 LiCSAR 产品获取、断点续传、LiCSBAS-ready 目录组织、结构检查和多帧时间规划的开源 Python 工具。
 
-本项目最初面向 Windows 用户的实际获取需求开发，但核心代码使用 Python 的跨平台路径、网络和文件操作。当前 `1.3.0-rc1` 是**审稿修订测试候选版**，GitHub Actions 已配置为在 Windows、Ubuntu Linux 和 macOS 上运行；是否真正通过必须以 Actions 页面的实际结果为准，不能预先声称全部通过。
+本项目最初面向 Windows 用户的实际获取需求开发，但核心代码使用 Python 的跨平台路径、网络和文件操作。`v1.3.0` 审稿修订版已在 Windows、Ubuntu Linux 和 macOS 上分别以 Python 3.10 和 3.12 完成 CI 验证，6/6 组合全部通过。Windows 批处理文件仅为便利启动器，核心 Python 命令为跨平台实现。
 
 软件不负责生成干涉图、时序反演、多帧拼接、跨帧参考统一、大气建模、升降轨 LOS 分解或地球物理解释。
 
@@ -39,5 +39,4 @@ REVIEWER_REVISION_TESTING_GUIDE_CN.md
 ## 版本原则
 
 - `v1.2.4`：初次投稿时的固定 Release，应保留，不删除、不覆盖；
-- `1.3.0-rc1`：当前用于审稿修订测试的候选版；
-- 所有真实验证完成后，再冻结并发布 `v1.3.0`。
+- `v1.3.0`：审稿修订正式版本，加入跨平台验证、106D 四模式比较、20/20 SHA-256 与 LiCSBAS Step 01 对照证据。
